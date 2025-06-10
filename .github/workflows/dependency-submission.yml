@@ -18,6 +18,11 @@ jobs:
         with:
           ref: ${{ github.event.inputs.commit-ref }}
 
+      - name: submit-dependency-snapshot
+        uses: advanced-security/component-detection-dependency-submission-action@v0.0.3
+        with: 
+          detectorArgs: "--DetectorCategories NuGet"
+
       # - name: setup-ecosystem
       #   uses: actions/setup-dotnet@v4
       #   with:
@@ -86,9 +91,5 @@ jobs:
       #       exit 1
       #     fi
 
-      - name: submit-dependency-snapshot
-        uses: advanced-security/component-detection-dependency-submission-action@v0.0.3
-        with: 
-          detectorArgs: "--DetectorCategories NuGet"
 
 
