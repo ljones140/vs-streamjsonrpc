@@ -22,7 +22,7 @@ jobs:
       - name: submit-dependency-snapshot
         uses: advanced-security/component-detection-dependency-submission-action@v0.0.3
         with: 
-          detectorArgs: "--DetectorCategories NuGet"
+          detectorArgs: "--DetectorCategories='NuGet'"
 
       # - name: setup-ecosystem
       #   uses: actions/setup-dotnet@v4
