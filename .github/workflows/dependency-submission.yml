@@ -27,6 +27,7 @@ jobs:
             6.0.x
             7.0.x
             8.0.x
+      - run: dotnet restore --locked-mode
 
       - name: submit-dependency-snapshot
         uses: advanced-security/component-detection-dependency-submission-action@v0.0.3
