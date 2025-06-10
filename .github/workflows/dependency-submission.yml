@@ -88,6 +88,7 @@ jobs:
 
       - name: submit-dependency-snapshot
         uses: advanced-security/component-detection-dependency-submission-action@v0.0.3
-        with: detectorArgs: "--DetectorCategories NuGet"
+        with: 
+          detectorArgs: "--DetectorCategories NuGet"
 
 
