@@ -19,18 +19,19 @@ jobs:
         with:
           ref: ${{ github.event.inputs.commit-ref }}
 
+
+      - name: setup-ecosystem
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: |
+            6.0.x
+            7.0.x
+            8.0.x
+
       - name: submit-dependency-snapshot
         uses: advanced-security/component-detection-dependency-submission-action@v0.0.3
         with: 
           detectorArgs: "DetectorCategories=NuGet"
-
-      # - name: setup-ecosystem
-      #   uses: actions/setup-dotnet@v4
-      #   with:
-      #     dotnet-version: |
-      #       6.0.x
-      #       7.0.x
-      #       8.0.x
 
       # - name: log-toolchain-versions
       #   run: |
