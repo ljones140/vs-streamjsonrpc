@@ -90,6 +90,12 @@ jobs:
           fi
 
       - name: submit-dependency-snapshot
-        uses: advanced-security/component-detection-dependency-submission-action@v0.0.6
+        uses: advanced-security/component-detection-dependency-submission-action@0f3b6aecc63e952c2c40366e0bd0fa23e90704ad
         with: 
           detectorArgs: "DetectorCategories=NuGet"
+          detector-name: Lewis Detector
+          detector-version: 1.1.1
+          detector-url: http://www.example.com
+          snapshot-sha: 0f3b6aecc63e952c2c40366e0bd0fa23e90704ad
+          snapshot-ref: refs/heads/feature-branch
+          
